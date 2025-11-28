@@ -1,0 +1,31 @@
+PHP Warning:  Module "openssl" is already loaded in Unknown on line 0
+
+Warning: Module "openssl" is already loaded in Unknown on line 0
+
+Warning: Module "openssl" is already loaded in Unknown on line 0
+PHP Warning:  Module "openssl" is already loaded in Unknown on line 0
+
+   FAIL  Tests\Feature\UserFlowTest
+  ⨯ user can…  0.37s  
+  ──────────────────  
+   FAILED  Tests\Feature\UserFlowTest > user can register  MethodNotAllowedHttpException   
+  The POST method is not supported for route register. Supported methods: GET, HEAD.
+
+  at vendor\laravel\framework\src\Illuminate\Routing\AbstractRouteCollection.php:123
+    119▕      * @throws \Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException
+    120▕      */
+    121▕     protected function requestMethodNotAllowed($request, array $others, $method)
+    122▕     {
+  ➜ 123▕         throw new MethodNotAllowedHttpException(
+    124▕             $others,
+    125▕             sprintf(
+    126▕                 'The %s method is not supported for route %s. Supported methods: %s.',
+    127▕                 $method,
+
+  1   vendor\laravel\framework\src\Illuminate\Routing\AbstractRouteCollection.php:123
+  2   vendor\laravel\framework\src\Illuminate\Routing\AbstractRouteCollection.php:108
+
+
+  Tests:    1 failed (0 assertions)
+  Duration: 0.50s
+

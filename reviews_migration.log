@@ -1,0 +1,8 @@
+PHP Warning:  Module "openssl" is already loaded in Unknown on line 0
+
+Warning: Module "openssl" is already loaded in Unknown on line 0
+
+   INFO  Running migrations.  
+
+  2025_11_28_065912_create_reviews_table  353.30ms DONE
+
