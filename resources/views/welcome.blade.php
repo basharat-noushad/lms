@@ -1,138 +1,260 @@
 <x-public-layout>
     <!-- Hero Section -->
-    <div class="relative bg-white dark:bg-gray-900 overflow-hidden">
-        <div class="absolute inset-y-0 right-0 w-1/2 bg-gray-50 dark:bg-gray-800/50 rounded-l-[50px] transform translate-x-1/3 skew-x-12 z-0 hidden lg:block"></div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24 lg:pt-32 lg:pb-40">
-            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
-                <div class="lg:col-span-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 dark:bg-primary-900/30 border border-primary-100 dark:border-primary-800 mb-8">
-                        <span class="flex h-2 w-2 rounded-full bg-primary-600"></span>
-                        <span class="text-sm font-medium text-primary-700 dark:text-primary-300">New courses added weekly</span>
-                    </div>
-
-                    <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight mb-6">
-                        Unlock your potential with <span class="text-primary-600">world-class</span> learning.
-                    </h1>
-
-                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                        Join over 10,000 students gaining new skills every day. From coding to design, business to marketing — we have the expert-led courses you need to advance your career.
-                    </p>
-
-                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                        <a href="{{ route('courses.index') }}" class="w-full sm:w-auto px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-full transition-all duration-200 shadow-lg shadow-primary-600/30 transform hover:-translate-y-1 text-center">
-                            Start Learning Now
-                        </a>
-                        <a href="#" class="w-full sm:w-auto px-8 py-4 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-bold rounded-full border border-gray-200 dark:border-gray-700 transition-all duration-200 text-center flex items-center justify-center gap-2 group">
-                            <svg class="w-5 h-5 text-gray-500 group-hover:text-primary-600 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                            Watch Demo
-                        </a>
-                    </div>
-
-                    <div class="mt-10 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-500 dark:text-gray-400">
-                        <div class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                            <span>No credit card required</span>
+    <div class="relative overflow-hidden bg-white dark:bg-gray-900 pt-16 pb-32 space-y-24">
+        <div class="relative">
+            <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+                <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:px-0 lg:py-16">
+                    <div>
+                        <div class="inline-flex items-center rounded-full border border-primary-200 bg-primary-50 p-2 pr-4 sm:text-base lg:text-sm xl:text-base hover:text-gray-900">
+                            <span class="rounded-full bg-primary-500 px-3 py-0.5 text-xs font-semibold leading-5 text-white">New</span>
+                            <span class="ml-4 text-sm text-primary-700">Explore our latest AI courses</span>
+                            <!-- Chevron -->
+                            <svg class="ml-2 h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                            </svg>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                            <span>14-day free trial</span>
+                        <div class="mt-6">
+                            <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
+                                Master new skills with <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-indigo-600">expert-led</span> online courses.
+                            </h1>
+                            <p class="mt-6 text-lg text-gray-500 dark:text-gray-300">
+                                Unlock your potential with LearnHub. Access thousands of high-quality courses from industry experts and take your career to the next level.
+                            </p>
+                            <div class="mt-8 flex gap-x-4">
+                                <a href="{{ route('courses.index') }}" class="inline-flex items-center justify-center rounded-full bg-primary-600 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition-all duration-200 transform hover:-translate-y-1">
+                                    Browse Courses
+                                </a>
+                                <a href="#" class="inline-flex items-center justify-center rounded-full bg-white dark:bg-gray-800 px-8 py-3 text-base font-semibold text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200">
+                                    Become Instructor
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="mt-12 sm:mt-16 lg:mt-0">
+                    <div class="-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+                        <!-- Abstract shapes/blobs -->
+                        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary-200/50 mix-blend-multiply blur-3xl animate-blob"></div>
+                        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-indigo-200/50 mix-blend-multiply blur-3xl animate-blob animation-delay-2000"></div>
 
-                <div class="lg:col-span-6 mt-16 lg:mt-0 relative">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800 transform rotate-1 hover:rotate-0 transition-all duration-500">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Students learning" class="w-full h-auto">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6 text-white">
-                            <div class="flex items-center gap-3 mb-2">
-                                <div class="flex -space-x-2">
-                                    <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="">
-                                    <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="">
-                                    <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&h=64" alt="">
-                                </div>
-                                <span class="font-medium text-sm">Join 2,000+ others currently learning</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Floating Cards -->
-                    <div class="absolute -top-10 -left-10 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 hidden md:block animate-bounce-slow">
-                        <div class="flex items-center gap-3">
-                            <div class="p-2 bg-green-100 rounded-lg text-green-600">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                            </div>
-                            <div>
-                                <p class="text-sm font-bold text-gray-900 dark:text-white">Course Completed</p>
-                                <p class="text-xs text-gray-500">Just now</p>
-                            </div>
-                        </div>
+                        <img loading="lazy" class="w-full rounded-2xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80" alt="Students learning together">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Trusted By -->
-    <div class="py-10 bg-gray-50 dark:bg-gray-800/50 border-y border-gray-100 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6">Trusted by leading companies</p>
-            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                <!-- Simple Text Logos for specific "brands" -->
-                <span class="text-xl font-bold text-gray-800 dark:text-white">ACME Corp</span>
-                <span class="text-xl font-bold text-gray-800 dark:text-white">GlobalBank</span>
-                <span class="text-xl font-bold text-gray-800 dark:text-white">TechFlow</span>
-                <span class="text-xl font-bold text-gray-800 dark:text-white">NextGen</span>
-                <span class="text-xl font-bold text-gray-800 dark:text-white">Starlight</span>
-            </div>
+    <!-- Stats Section -->
+    <div class="bg-gray-50 dark:bg-gray-800 py-12 sm:py-16 border-y border-gray-100 dark:border-gray-700">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
+                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <dt class="text-base leading-7 text-gray-600 dark:text-gray-400">Active Students</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-5xl">10k+</dd>
+                </div>
+                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <dt class="text-base leading-7 text-gray-600 dark:text-gray-400">Expert Instructors</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-5xl">200+</dd>
+                </div>
+                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <dt class="text-base leading-7 text-gray-600 dark:text-gray-400">Total Courses</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-5xl">500+</dd>
+                </div>
+                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <dt class="text-base leading-7 text-gray-600 dark:text-gray-400">Satisfaction Rate</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-5xl">4.9/5</dd>
+                </div>
+            </dl>
         </div>
     </div>
 
-    <!-- Categories Grid -->
-    <div class="py-24 bg-white dark:bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Explore Top Categories</h2>
-                <p class="text-gray-600 dark:text-gray-400 text-lg">Browse our wide selection of courses to find your next learning path.</p>
+    <!-- Featured Categories -->
+    <div class="py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Explore Top Categories</h2>
+                <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">Find the perfect course for your career goals from our wide range of categories.</p>
             </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
                 @php
-                $categories = [
-                    ['name' => 'Design', 'icon' => 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01'],
-                    ['name' => 'Development', 'icon' => 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'],
-                    ['name' => 'Marketing', 'icon' => 'M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z'],
-                    ['name' => 'Business', 'icon' => 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'],
-                    ['name' => 'Photography', 'icon' => 'M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z'],
-                    ['name' => 'Music', 'icon' => 'M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3'],
-                    ['name' => 'Data Science', 'icon' => 'M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'],
-                    ['name' => 'Finance', 'icon' => 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'],
-                ];
+                    $categories = [
+                        ['name' => 'Web Development', 'icon' => 'code', 'color' => 'bg-blue-100 text-blue-600'],
+                        ['name' => 'Data Science', 'icon' => 'chart-bar', 'color' => 'bg-green-100 text-green-600'],
+                        ['name' => 'Digital Marketing', 'icon' => 'speakerphone', 'color' => 'bg-purple-100 text-purple-600'],
+                        ['name' => 'Design', 'icon' => 'pencil', 'color' => 'bg-pink-100 text-pink-600'],
+                    ];
                 @endphp
-
-                @foreach($categories as $cat)
-                <a href="{{ route('courses.index') }}" class="group flex flex-col items-center justify-center p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-transparent hover:border-primary-100 hover:bg-white dark:hover:bg-gray-700 hover:shadow-xl transition-all duration-300">
-                    <div class="h-14 w-14 rounded-2xl bg-white dark:bg-gray-600 shadow-sm flex items-center justify-center text-gray-400 group-hover:text-primary-600 group-hover:scale-110 transition-all duration-300 mb-4">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ $cat['icon'] }}" /></svg>
+                @foreach($categories as $category)
+                    <div class="relative flex items-center space-x-3 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-primary-500 hover:shadow-lg hover:border-primary-200 transition-all duration-300">
+                        <div class="flex-shrink-0">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-xl {{ $category['color'] }}">
+                                <!-- Icon Placeholder -->
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                            </div>
+                        </div>
+                        <div class="min-w-0 flex-1">
+                            <a href="#" class="focus:outline-none">
+                                <span class="absolute inset-0" aria-hidden="true"></span>
+                                <p class="text-sm font-medium text-gray-900 dark:text-white">{{ $category['name'] }}</p>
+                                <p class="truncate text-sm text-gray-500 dark:text-gray-400">100+ Courses</p>
+                            </a>
+                        </div>
                     </div>
-                    <h3 class="font-semibold text-gray-900 dark:text-white">{{ $cat['name'] }}</h3>
-                </a>
                 @endforeach
             </div>
         </div>
     </div>
 
-    <!-- Features Section (Alternating) -->
-    <div class="py-24 bg-gray-50 dark:bg-gray-800 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Feature 1 -->
-            <div class="flex flex-col lg:flex-row items-center gap-16 mb-24">
-                <div class="lg:w-1/2">
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-primary-200 dark:bg-primary-900/30 blur-3xl rounded-full opacity-30 transform -translate-x-10 translate-y-10"></div>
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Dashboard interface" class="relative rounded-2xl shadow-2xl border border-gray-100 dark:border-gray-700">
+    <!-- Featured Courses Section -->
+    <div class="bg-gray-50 dark:bg-gray-900 py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Featured Courses</h2>
+                <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">Hand-picked courses to help you get started on your journey.</p>
+            </div>
+
+            <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                <!-- Mock Course Card 1 -->
+                <article class="flex flex-col items-start justify-between rounded-3xl bg-white dark:bg-gray-800 p-4 shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+                    <div class="relative w-full">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="" class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+                        <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-gray-900 shadow-sm">
+                            $49.99
+                        </div>
                     </div>
+                    <div class="max-w-xl p-4">
+                        <div class="mt-4 flex items-center gap-x-4 text-xs">
+                            <span class="text-gray-500 dark:text-gray-400">Mar 16, 2024</span>
+                            <a href="#" class="relative z-10 rounded-full bg-gray-50 dark:bg-gray-700 px-3 py-1.5 font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600">Development</a>
+                        </div>
+                        <div class="group relative">
+                            <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 dark:text-white group-hover:text-primary-600 transition-colors">
+                                <a href="#">
+                                    <span class="absolute inset-0"></span>
+                                    Full-Stack Web Development Bootcamp
+                                </a>
+                            </h3>
+                            <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 dark:text-gray-400">Learn to build modern web applications with React, Node.js, and MongoDB from scratch.</p>
+                        </div>
+                        <div class="relative mt-8 flex items-center gap-x-4">
+                            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-100">
+                            <div class="text-sm leading-6">
+                                <p class="font-semibold text-gray-900 dark:text-white">
+                                    <a href="#">
+                                        <span class="absolute inset-0"></span>
+                                        Michael Foster
+                                    </a>
+                                </p>
+                                <p class="text-gray-600 dark:text-gray-400">Senior Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Mock Course Card 2 -->
+                <article class="flex flex-col items-start justify-between rounded-3xl bg-white dark:bg-gray-800 p-4 shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+                    <div class="relative w-full">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="" class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+                        <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-gray-900 shadow-sm">
+                            $89.99
+                        </div>
+                    </div>
+                    <div class="max-w-xl p-4">
+                        <div class="mt-4 flex items-center gap-x-4 text-xs">
+                            <span class="text-gray-500 dark:text-gray-400">Mar 10, 2024</span>
+                            <a href="#" class="relative z-10 rounded-full bg-gray-50 dark:bg-gray-700 px-3 py-1.5 font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600">Data Science</a>
+                        </div>
+                        <div class="group relative">
+                            <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 dark:text-white group-hover:text-primary-600 transition-colors">
+                                <a href="#">
+                                    <span class="absolute inset-0"></span>
+                                    Data Science Mastery with Python
+                                </a>
+                            </h3>
+                            <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 dark:text-gray-400">Master data analysis, visualization, and machine learning using Python libraries like Pandas and Scikit-Learn.</p>
+                        </div>
+                        <div class="relative mt-8 flex items-center gap-x-4">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-100">
+                            <div class="text-sm leading-6">
+                                <p class="font-semibold text-gray-900 dark:text-white">
+                                    <a href="#">
+                                        <span class="absolute inset-0"></span>
+                                        Tom Cook
+                                    </a>
+                                </p>
+                                <p class="text-gray-600 dark:text-gray-400">Data Scientist</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Mock Course Card 3 -->
+                <article class="flex flex-col items-start justify-between rounded-3xl bg-white dark:bg-gray-800 p-4 shadow-lg ring-1 ring-gray-200 dark:ring-gray-700 hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+                    <div class="relative w-full">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="" class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
+                        <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-gray-900 shadow-sm">
+                            $59.99
+                        </div>
+                    </div>
+                    <div class="max-w-xl p-4">
+                        <div class="mt-4 flex items-center gap-x-4 text-xs">
+                            <span class="text-gray-500 dark:text-gray-400">Feb 12, 2024</span>
+                            <a href="#" class="relative z-10 rounded-full bg-gray-50 dark:bg-gray-700 px-3 py-1.5 font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600">Design</a>
+                        </div>
+                        <div class="group relative">
+                            <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 dark:text-white group-hover:text-primary-600 transition-colors">
+                                <a href="#">
+                                    <span class="absolute inset-0"></span>
+                                    UI/UX Design Fundamentals
+                                </a>
+                            </h3>
+                            <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 dark:text-gray-400">Learn the principles of user interface and user experience design to create beautiful products.</p>
+                        </div>
+                        <div class="relative mt-8 flex items-center gap-x-4">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-100">
+                            <div class="text-sm leading-6">
+                                <p class="font-semibold text-gray-900 dark:text-white">
+                                    <a href="#">
+                                        <span class="absolute inset-0"></span>
+                                        Lindsay Walton
+                                    </a>
+                                </p>
+                                <p class="text-gray-600 dark:text-gray-400">Product Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="{{ route('courses.index') }}" class="inline-flex items-center gap-x-2 rounded-full border border-gray-300 bg-white px-6 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 transition-all duration-200">
+                    View All Courses
+                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="relative isolate overflow-hidden bg-primary-900">
+        <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Start your learning journey today.</h2>
+                <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-primary-200">
+                    Join thousands of students and start learning the skills you need for your future career.
+                </p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                    <a href="{{ route('register') }}" class="rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-primary-900 shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 transform hover:scale-105">
+                        Get started
+                    </a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-white group flex items-center">
+                        Learn more <span class="ml-1 group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+                    </a>
                 </div>
                 <div class="lg:w-1/2">
                     <div class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4">Structured Learning</div>
@@ -199,5 +321,14 @@
                 </a>
             </div>
         </div>
+        <svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]" aria-hidden="true">
+            <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)" fill-opacity="0.7" />
+            <defs>
+                <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
+                    <stop stop-color="#7775D6" />
+                    <stop offset="1" stop-color="#E935C1" />
+                </radialGradient>
+            </defs>
+        </svg>
     </div>
 </x-public-layout>
